@@ -7,7 +7,7 @@ describe('App', () => {
   test('the title is visible', () => {
     render(<App />);
     // @ts-expect-error
-    expect(screen.getByText(/Reacdle/i)).toBeInTheDocument();
+    expect(screen.getByText(/Woordle/i)).toBeInTheDocument();
   });
 
   test('shows empty state', () => {

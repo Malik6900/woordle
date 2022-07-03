@@ -3,6 +3,7 @@ import Keyboard from './Keyboard';
 import { useStore, NUMBER_OF_GUESSES, WORD_LENGTH } from './store';
 import { isValidWord } from './word-utils';
 import WordRow from './WordRow';
+import Footer from './components/Footer';
 
 export default function App() {
   const state = useStore();
@@ -48,7 +49,16 @@ export default function App() {
   return (
     <div className="mx-auto w-96 relative h-screen">
       <header className="border-b border-gray-400 py-4">
-        <h1 className="text-3xl font-bold text-center uppercase">Reacdle</h1>
+        <h1 className="text-3xl font-bold text-center uppercase">
+          <span className="text-[#bada55]">W</span>
+          <span className="text-[#173f5b]">O</span>
+          <span className="text-[#217b4b]">O</span>
+          <span className="text-[#7c2237]">R</span>
+          <span className="text-[#5955da]">D</span>
+          <span className="text-[#fa3ebe]">L</span>
+          <span className="text-[#771c66]">E</span>
+          </h1>
+        <h5 className="text-1xl font-bold text-center uppercase">Woordle in Afrikaans</h5>
       </header>
 
       <main className="grid grid-rows-6 gap-4 my-4">
@@ -77,7 +87,7 @@ export default function App() {
             w-11/12 h-1/2 p-6 left-0 right-0 mx-auto top-1/4
            grid grid-rows-4"
         >
-          <p>Game Over</p>
+          <p>Speletjie is Klaar</p>
           <WordRow
             word={state.answer}
             className="items-center justify-items-center"
@@ -90,10 +100,12 @@ export default function App() {
               setGuess('');
             }}
           >
-            New Game
+            Speel Veer
           </button>
         </div>
       )}
+
+      <Footer />
     </div>
   );
 }

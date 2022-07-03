@@ -80,7 +80,7 @@ export const useStore = create<StoreState>(
       };
     },
     {
-      name: 'reacdle',
+      name: 'woordle',
       getStorage: () => localStorage,
     }
   )
