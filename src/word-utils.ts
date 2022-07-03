@@ -75,5 +75,5 @@ export function getRandomWord(): string {
 }
 
 export function isValidWord(word: string): boolean {
-  return wordBank.valid.concat(wordBank.valid).includes(word);
+  return wordBank.valid.concat(wordBank.invalid).includes(word);
 }
